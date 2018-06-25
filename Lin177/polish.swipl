@@ -1,0 +1,24 @@
+polish([c,z,y,s,c,i,c], [verb]).
+
+polish([o,s,m,i,e,l,a,c], [verb]).
+
+polish([o,s,m,i,e,l,i,c], [verb]).
+
+polish([u,m,o,z,l,i,w,i,c], [verb]).
+
+polish([u,m,o,z,l,i,w,i,a,c], [verb]).
+
+polish([u,r,u,c,h,o,m,i,c], [verb]).
+
+polish([u,r,u,c,h,a,m,i,a,c], [verb]).
+
+polish([u,s,z,e,s,l,i,w,i,c], [verb]).
+
+polish([u,s,z,e,s,l,i,w,i,a,c], [verb]).
+
+polish([d,b,a,c], [verb]).
+
+polish(A, [negative, verb]) :- polish([B|C], [verb]), member(B, [o,u]), append([B], [nie], D), append(D, C, A).
+
+polish(A, [negative, verb]) :- polish([B|C], [verb]), \+ member(B, [o,u]), append([za], [nie], D), 
+	append(D, [B], E), append(E, C, A).
