@@ -1,0 +1,14 @@
+speaks(jacques, [french]).
+speaks(nguyen, [vietnamese]).
+speaks(jacques, [spanish]).
+speaks(jacques, [english]).
+speaks(jacques, [german]).
+speaks(nguyen, [spanish]).
+speaks(nguyen, [english]).
+speaks(kacy, [english]).
+speaks(pablo, [spanish]).
+speaks(lee, [korean]).
+speaks(tom, [german]).
+speaks(tom, [english]).
+
+trilingual(A,B) :- speaks(A,C), speaks(A,D), \+(C = D), speaks(A,E), \+(C = E), \+(D = E), append(C,D,F), append(F,E,B).
