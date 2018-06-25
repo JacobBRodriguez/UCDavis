@@ -1,0 +1,55 @@
+foot(alabama, [ala, bama]).
+foot(alaska, [alaska]).
+foot(arizona, [ari, zona]).
+foot(arkansas, [arkansas]).
+foot(california, [cali, fornia]).
+foot(colorado, [colo, rado]).
+foot(connecticut, [connecticut]).
+foot(delaware, [dela, ware]).
+foot(florida, [flori, da]).
+foot(georgia, [georgia]).
+foot(hawaii, [hawaii]).
+foot(idaho, [ida, ho]).
+foot(illinois, [illi, nois]).
+foot(indiana, [indi, ana]).
+foot(iowa, [iowa]).
+foot(kansas, [kansas]).
+foot(kentucky, [ken, tucky]).
+foot(louisiana, [louisi, ana]).
+foot(maine, [maine]).
+foot(maryland, [mary, land]).
+foot(massachusetts, [massa, chusetts]).
+foot(michigan, [michi, gan]).
+foot(minnesota, [minne, sota]).
+foot(mississippi, [missi, ssippi]).
+foot(missouri, [missouri]).
+foot(montana, [mon, tana]).
+foot(nebraska, [ne, braska]).
+foot(nevada, [ne, vada]).
+foot(new-hampshire, [new, hamp, shire]).
+foot(new-jersey, [new, jersey]).
+foot(new-mexico, [new, mexi, co]).
+foot(new-york, [new, york]).
+foot(north-carolina, [north, caro, lina]).
+foot(north-dakota, [north, dakota]).
+foot(ohio, [o, hio]).
+foot(oklahoma, [okla, homa]).
+foot(oregon, [oregon]).
+foot(pennsylvania, [pennsyl, vania]).
+foot(rhode-island, [rhode, island]).
+foot(south-carolina, [south, caro, lina]).
+foot(south-dakota, [south, dakota]).
+foot(tennessee, [tenne, ssee]).
+foot(texas, [texas]).
+foot(utah, [utah]).
+foot(vermont, [ver, mont]).
+foot(virginia, [vir, ginia]).
+foot(washington, [washing, ton]).
+foot(west-virginia, [west, vir, ginia]).
+foot(wisconsin, [wis, consin]).
+foot(wyoming, [wy, oming]).
+
+friggin(State, FrigginState) :- foot(State, [FirstFoot|Feet1]), append(Feet2, [LastFoot], Feet1),
+    select('-friggin-', Frigged, Feet2), append([[FirstFoot], Frigged, [LastFoot]], Atoms),
+    atomic_list_concat(Atoms, FrigginState).
+
