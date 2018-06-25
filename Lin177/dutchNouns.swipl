@@ -1,0 +1,6 @@
+dutch([b, e, e, n],    [noun, single]).
+dutch([b, e, r, g],    [noun, single]).
+dutch([s, t, e, e, n], [noun, single]).
+dutch([d, i, e, r],    [noun, single]).
+
+dutch(Noun, [noun, collective]) :- dutch(NounSingle, [noun, single]), append([[g, e], NounSingle, [t, e]], Noun).
