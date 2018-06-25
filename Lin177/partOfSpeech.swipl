@@ -1,0 +1,48 @@
+english([dog], noun).
+english([dog], verb).
+english([space], noun).
+english([space], verb).
+english([chomsky], noun).
+english([surprisingly], adverb).
+english([too], adverb).
+english([red], adjective).
+english([red], noun).
+english([will], verb).
+english([will], noun).
+english([large], adjective).
+english([large], verb).
+english([large], adverb).
+english([balloon], noun).
+english([balloon], verb).
+english([us], pronoun).
+english([ate], verb).
+english([ate], noun).
+english([some], determiner).
+english([some], pronoun).
+english([some], adverb).
+
+sentence() :- english([dog],noun), write('The dog jumped over the fence').
+sentence() :- english([dog],verb), write('That man dogged him with questions').
+sentence() :- english([space],noun), write('Space is where you cannot hear anything').
+sentence() :- english([space],verb), write('The poles are spaced 3 feet apart').
+sentence() :- english([chomsky],noun), write('Chomsky had a great idea in the book').
+sentence() :- english([surprisingly],adverb), write('This surprisingly is not even the end of it').
+sentence() :- english([too],adverb), write('I am too scared to see the end of it').
+sentence() :- english([red],adjective), write('Her red lips were quite noticeable').
+sentence() :- english([red],noun), write('The red in the paint was visible to us').
+sentence() :- english([will],verb), write('He had a strong will to live').
+sentence() :- english([will],noun), write('Will could not wait until the end of class').
+sentence() :- english([large],adjective), write('The large ball could not be held up').
+sentence() :- english([large],verb), write('He was larging it the whole way to the club').
+sentence() :- english([large],adverb), write('This large freeing of the sail worked for the men').
+sentence() :- english([balloon],noun), write('The balloon popped before her eyes').
+sentence() :- english([balloon],verb), write('He ballooned up from eating too much').
+sentence() :- english([us],pronoun), write('This is us from the fifth grade').
+sentence() :- english([ate],verb), write('He ate too much yesterday').
+sentence() :- english([ate],noun), write('My ate is always there for me').
+sentence() :- english([some],determiner), write('I made some money yesterday').
+sentence() :- english([some],pronoun), write('Here are some of our suggestions').
+sentence() :- english([some],adverb), write('To some extent, the damage was not too bad').
+
+
+
