@@ -1,0 +1,20 @@
+
+japanese([adamu],[nounphrase],[adam],[entity]).
+
+japanese([iivu ],[nounphrase],[eve],[entity]).
+
+japanese([waraimasu],[verb,intransitive],[laughs],[property]).
+
+japanese([nakimasu],[verb,intransitive],[cries],[property]).
+
+japanese([mimasu],[verb,transitive],[watches],[relation]).
+
+japanese([tetsudaimasu],[verb,transitive],[helps],[relation]).
+
+japanese(A,[verbphrase],B,[property]):- japanese(A,[verb,intransitive],B,[property]).
+
+japanese(A,[nounphrase,accusative],B,[entity]):- japanese(A,[nounphrase],B,[entity]).
+
+japanese(A,[verbphrase],B,[property]):- japanese(C,[nounphrase,accusative],D,[entity]), japanese(E,[verb,transitive],F,[relation]), append(C,[o],H),append(H,E,A), append(F,D,B).
+/* Fix these two lines of A and B */
+japanese(A,[sentence],B,[proposition]):- japanese(C,[nounphrase],D,[entity]), japanese(E,[verbphrase],F,[property]), append(C,[ga],H), append(H,E,A), append(D,F,B).
