@@ -1,0 +1,30 @@
+spanishjapanese([adan ],[nounphrase],[adamu],[entity]).
+
+spanishjapanese([eva  ],[nounphrase],[iivu],[entity]).
+
+spanishjapanese([rie  ],[verb,intransitive],[waraimasu],[property]).
+
+spanishjapanese([llora],[verb,intransitive],[nakimasu],[property]).
+
+spanishjapanese([mira ],[verb,transitive],[mimasu],[relation]).
+
+spanishjapanese([ayuda],[verb,transitive],[tetsudaimasu],[relation]).
+
+spanishjapanese(A,[verbphrase],B,[property]):-
+	spanishjapanese(A,[verb,intransitive],B,[property]).
+
+spanishjapanese(A,[nounphrase,accusative],B,[entity]):-
+	spanishjapanese(C,[nounphrase],B,[entity]),
+	append([a],C,A).
+
+spanishjapanese(A,[verbphrase],B,[property]):-
+	spanishjapanese(C,[verb,transitive],D,[relation]),
+	spanishjapanese(E,[nounphrase,accusative],F,[entity]),
+	append(C,E,A),
+	append(F,[o],J), append(J,D,B).
+
+spanishjapanese(A,[sentence],B,[proposition]):-
+	spanishjapanese(C,[nounphrase],D,[entity]),
+	spanishjapanese(E,[verbphrase],F,[property]),
+	append(C,E,A),
+	append(D,[ga],J), append(J,F,B).
