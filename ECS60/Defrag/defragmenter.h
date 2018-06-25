@@ -1,4 +1,4 @@
-// Author Me
+// Author Jacob Rodriguez
 #ifndef defragmenterH
   #define defragmenterH
 
