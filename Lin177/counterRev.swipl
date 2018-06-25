@@ -1,0 +1,9 @@
+word(revolution).
+
+abides(Morph, Morphary) :- atom_concat(Morph, ary, Morphary).
+
+counter(Morph, CounterMorph) :- atom_concat(counter, Morph, CounterMorph).
+
+counterRevolutionary(Morph) :- word(X), counter(X, Y), abides(Y, Morph). /* First way to generate */
+
+counterRevolutionary(Morph) :- word(X), abides(X,Y), counter(Y, Morph). /* Second way to generate as someone opposed */
