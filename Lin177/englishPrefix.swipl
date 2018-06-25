@@ -1,0 +1,7 @@
+word(make,[verb]).
+word(made,[verb]).
+word(cat,[noun]).
+word(tent,[noun]).
+word(done,[verb]).
+
+prefix(word, Prefixed) :- word(Word,[verb]), append([pre],Word, Prefixed).
